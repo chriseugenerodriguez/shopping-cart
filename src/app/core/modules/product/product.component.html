@@ -9,11 +9,6 @@
     <div class="product__items__item__meta-price">
       ${{product.price}}
     </div>
-    <select class="product__items__item__meta-qty" (change)="onSelect($event.target.value)" [(ngModel)]="selectedQuantity.id">
-      <option *ngFor="let i of quantity" value={{i.id}}>
-        {{i.name}}
-      </option>
-    </select>
 
     <button type="submit" [disabled]="inCart(name)" (click)="addCart(product)" class="btn btn-primary product__items__item-btn">Add to Cart</button>
   </div>

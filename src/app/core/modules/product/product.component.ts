@@ -1,8 +1,7 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-// INTERFACE
-import { Dropdown } from '../../interfaces/dropdown.interface';
-
+// SERVICE
+import { CartService } from '../../services/cart.service';
 
 // COMPONENT
 @Component({
@@ -11,38 +10,18 @@ import { Dropdown } from '../../interfaces/dropdown.interface';
 })
 
 // CLASS
-export class ModuleProductComponent implements AfterViewInit {
+export class ModuleProductComponent {
 
   @Input() public product: object;
 
-  length: number;
-  qty: number;
-
-  // DROPDOWN
-  selectedQuantity: Dropdown;
-  quantity = Array(20)
-    .fill(1)
-    .map((x, i) => {
-      return {
-        id: i,
-        name: i
-      };
-    });
-
-  constructor() {
+  constructor(private CS: CartService) {
   }
 
-  ngAfterViewInit() {
-
+  addCart(i) {
+    return this.CS.addToCart(i);
   }
 
-  onSelect(a) {
-    this.selectedQuantity = null;
-    for (let i = 0; i < this.quantity.length; i++) {
-      if (this.quantity[i].id === Number(a)) {
-        this.selectedQuantity = this.quantity[i];
-        this.qty = this.quantity[i].id;
-      }
-    }
+  inCart(i): boolean {
+    return this.CS.inCart(i);
   }
 }

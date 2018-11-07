@@ -18,6 +18,17 @@ export class CartService {
     }
   }
 
+  public inCart(i: Item): boolean {
+    const a = this.cartObj.find(r => r === i);
+    let b = false;
+
+    if (a) {
+      b = true;
+    }
+
+    return b;
+  }
+
   public addToCart(item: Item) {
     const e = this.cartObj.find(r => r.sem3_id === item.sem3_id);
     const i = this.cartObj.indexOf(item);
