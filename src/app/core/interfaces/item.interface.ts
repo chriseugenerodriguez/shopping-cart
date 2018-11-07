@@ -1,6 +1,8 @@
 export interface Item {
-	Images: object,
-  Title: string,
-  Price: string,
-  QTY: number
+  Images: object;
+  Title: string;
+  Price: string;
+  QTY: number;
+  Category: string;
+  Rating: number;
 }

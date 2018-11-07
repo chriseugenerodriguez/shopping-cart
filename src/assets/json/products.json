@@ -7,7 +7,9 @@
         "Tablet": "./assets/img/flower-1@2x.jpg",
         "Desktop": "./assets/img/flower-1@3x.jpg"
       },
-      "Price": "30.00"
+      "Price": "30.00",
+      "Category": "Art",
+      "Rating": 4.3
     },
     {
       "Name": "Spring Mix",
@@ -16,7 +18,9 @@
         "Tablet": "./assets/img/flower-2@2x.jpg",
         "Desktop": "./assets/img/flower-2@3x.jpg"
       },
-      "Price": "35.00"
+      "Price": "20.00",
+      "Category": "Appliances",
+      "Rating": 4.6
     },
     {
       "Name": "Colorful Arrangement",
@@ -25,7 +29,9 @@
         "Tablet": "./assets/img/flower-3@2x.jpg",
         "Desktop": "./assets/img/flower-3@3x.jpg"
       },
-      "Price": "40.00"
+      "Price": "40.00",
+      "Category": "Grill",
+      "Rating": 5
     },
     {
       "Name": "Tulip Season",
@@ -34,7 +40,9 @@
         "Tablet": "./assets/img/flower-4@2x.jpg",
         "Desktop": "./assets/img/flower-4@3x.jpg"
       },
-      "Price": "50.00"
+      "Price": "10.00",
+      "Category": "Grill",
+      "Rating": 4.2
     }
   ]
 }
