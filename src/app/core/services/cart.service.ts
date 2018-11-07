@@ -18,8 +18,8 @@ export class CartService {
     }
   }
 
-  public inCart(i: Item): boolean {
-    const a = this.cartObj.find(r => r === i);
+  public inCart(item: Item): boolean {
+    const a = this.cartObj.find(r => r.id === item.id);
     let b = false;
 
     if (a) {
@@ -30,16 +30,14 @@ export class CartService {
   }
 
   public addToCart(item: Item) {
-    const e = this.cartObj.find(r => r.sem3_id === item.sem3_id);
+    const e = this.cartObj.find(r => r.id === item.id);
     const i = this.cartObj.indexOf(item);
 
     if (e) {
       e.quantity = e.quantity + item.quantity;
       this.cartObj[i] = e;
-      this.cartObj[i].savings = this.getSavings(e);
     } else {
       item.quantity = 1;
-      item.savings = this.getSavings(item);
       this.cartObj.push(item);
     }
 
@@ -47,7 +45,7 @@ export class CartService {
   }
 
   public removeFromCart(item: Item) {
-    const a = this.cartObj.filter(i => i.sem3_id !== item.sem3_id);
+    const a = this.cartObj.filter(i => i.id !== item.id);
     let b;
 
     if (this.cartObj.length === 1) {
@@ -62,8 +60,8 @@ export class CartService {
   }
 
   public updateCart(item: Item) {
-    const e = this.cartObj.find(r => r.sem3_id === item.sem3_id)
-    const i = this.cartObj.findIndex(r => r.sem3_id === item.sem3_id);
+    const e = this.cartObj.find(r => r.id === item.id);
+    const i = this.cartObj.findIndex(r => r.id === item.id);
 
     if (e) {
       this.cartObj[i] = e;
@@ -72,8 +70,8 @@ export class CartService {
   }
 
   public updateQty(item: Item) {
-    const e = this.cartObj.find(r => r.sem3_id === item.sem3_id)
-    const i = this.cartObj.findIndex(r => r.sem3_id === item.sem3_id);
+    const e = this.cartObj.find(r => r.id === item.id);
+    const i = this.cartObj.findIndex(r => r.id === item.id);
 
     if (e) {
       e.quantity += 1;
@@ -106,7 +104,7 @@ export class CartService {
 
     a.subscribe(r => {
       b = r.map(i => Math.ceil(i.price * 100) / 100).reduce((prev, next) => prev + next, 0);
-      c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0)
+      c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0);
       d = Math.ceil((b * c) * 100) / 100;
     });
     return d;
