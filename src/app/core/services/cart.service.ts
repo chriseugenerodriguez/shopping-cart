@@ -62,14 +62,10 @@ export class CartService {
   public getTotalAmount(): Observable<number> {
     const a = localStorage.get('cart');
     let b: any;
-    let c: any;
-    let d: any;
 
     a.subscribe(r => {
       b = r.map(i => Math.ceil(i.price * 100) / 100).reduce((prev, next) => prev + next, 0);
-      c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0);
-      d = Math.ceil((b * c) * 100) / 100;
     });
-    return d;
+    return b;
   }
 }
