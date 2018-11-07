@@ -59,13 +59,32 @@ export class CartService {
     localStorage.set('cart', b);
   }
 
+  public getTotalQuantity(): Observable<any> {
+    const a = localStorage.get('cart');
+    const b = localStorage.getItem('cart');
+    let c: Observable<number>;
+    if (b) {
+      a.subscribe(r => {
+        c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0);
+      });
+    } else {
+      c = null;
+    }
+
+    return c;
+  }
+
   public getTotalAmount(): Observable<number> {
     const a = localStorage.get('cart');
     let b: any;
+    let c: any;
+    let d: any;
 
     a.subscribe(r => {
       b = r.map(i => Math.ceil(i.price * 100) / 100).reduce((prev, next) => prev + next, 0);
+      c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0);
+      d = Math.ceil((b * c) * 100) / 100;
     });
-    return b;
+    return d;
   }
 }
