@@ -13,6 +13,7 @@ import { FooterModule } from './layout/shared/footer/footer.module';
 
 // PAGES
 import { CategoryModule } from './layout/pages/category/category.module';
+import { CartModule } from './layout/pages/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CategoryModule } from './layout/pages/category/category.module';
     FooterModule,
 
     // PAGES
-    CategoryModule
+    CategoryModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
