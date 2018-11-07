@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import {
-	HomeComponent,
+	CategoryComponent,
 } from './layout/index';
 
 @NgModule({
 	imports: [
 		RouterModule.forRoot([
-			{ path: '', component: HomeComponent, pathMatch: 'full' }
+			{ path: '', component: CategoryComponent, pathMatch: 'full' }
 		])
 	],
 	exports: [RouterModule]

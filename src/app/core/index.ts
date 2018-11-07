@@ -5,3 +5,6 @@ export * from './modules/cart/cart.module';
 // INTERFACES
 export * from './interfaces/dropdown.interface';
 export * from './interfaces/item.interface';
+
+// SERVICES
+export * from './services/cart.service';

@@ -1,5 +1,5 @@
 // PAGES
-export * from './pages/home/home.component';
+export * from './pages/category/category.component';
 
 // SHARED
 export * from './shared/header/header.component';

@@ -12,7 +12,7 @@ import { HeaderModule } from './layout/shared/header/header.module';
 import { FooterModule } from './layout/shared/footer/footer.module';
 
 // PAGES
-import { HomeModule } from './layout/pages/home/home.module';
+import { CategoryModule } from './layout/pages/category/category.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { HomeModule } from './layout/pages/home/home.module';
     FooterModule,
 
     // PAGES
-    HomeModule
+    CategoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

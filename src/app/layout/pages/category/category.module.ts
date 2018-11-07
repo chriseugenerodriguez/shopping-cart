@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 // RELATED
-import { HomeComponent } from './home.component';
+import { CategoryComponent } from './category.component';
 
 // MODULE
 import { ModuleProductModule } from '../../../core';
@@ -22,10 +22,10 @@ import { ModuleProductModule } from '../../../core';
 		ModuleProductModule,
 	],
 	declarations: [
-		HomeComponent,
+		CategoryComponent,
 	],
 	exports: [
-		HomeComponent,
+		CategoryComponent,
 	]
 })
-export class HomeModule { }
+export class CategoryModule { }

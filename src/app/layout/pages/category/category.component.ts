@@ -12,12 +12,12 @@ import { Item } from "src/app/core";
 
 // COMPONENT
 @Component({
-	selector: 'home-app',
-	templateUrl: 'home.component.html',
+	selector: 'category-app',
+	templateUrl: 'category.component.html',
 })
 
 // CLASS
-export class HomeComponent implements OnInit {
+export class CategoryComponent implements OnInit {
 
 	// ITEMS
 	products: Item;
