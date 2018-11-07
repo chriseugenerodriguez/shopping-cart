@@ -4,7 +4,7 @@
   <div class="product__items__item__meta">
     <div class="product__items__item__meta-title">{{product.name}}</div>
     <div class="product__items__item__meta-rating">
-      {{product.rating}}
+      <module-rating-app [rating]="product.rating"><module-rating-app>
     </div>
     <div class="product__items__item__meta-price">
       ${{product.price}}
