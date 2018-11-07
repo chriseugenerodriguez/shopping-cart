@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input } from '@angular/core';
+
+// REDUX
+import { Observable } from 'rxjs/internal/Observable';
+
+// SERVICES
+import { CartService } from '../../services/cart.service';
 
 // COMPONENT
 @Component({
@@ -9,28 +15,14 @@ import { Component, OnInit, Input } from "@angular/core";
 // CLASS
 export class ModuleCartComponent implements OnInit {
 
-  @Input() public data: object;
-  total: number;
-  qty: number;
+	@Input() public data: object;
 
-  constructor(){
-    this.qty = 0;
-    this.total = 0;
-  }
-  ngOnInit(): void {
-  }
+	constructor(private CS: CartService) {
+	}
+	ngOnInit(): void {
+	}
 
-  drop(i) {
-    i.preventDefault();
-
-    // GET DATA
-    this.total += Number(i.dataTransfer.getData("price") * i.dataTransfer.getData("qty"));
-    this.qty += Number(i.dataTransfer.getData("qty"));
-  }
-
-  dragover(i) {
-    i.preventDefault();
-    // Set the dropEffect to move
-    i.dataTransfer.dropEffect = "move"
-  }
+	public totalQuantity(): Observable<number> {
+		return this.CS.getTotalQuantity();
+	}
 }
