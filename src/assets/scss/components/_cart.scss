@@ -1,0 +1,53 @@
+.cart {
+  @include font-size(16px);
+  color: #ffffff;
+  font-family: 'Raleway', serif;
+  display: inline-block;
+  vertical-align: sub;
+
+  @media only screen and (max-width: $tablet) {
+    vertical-align: middle;
+  }
+
+  &__amount {
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: sub;
+
+    &-title {
+      text-transform: uppercase;
+    }
+    &-total {
+      margin-left: 4px;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 16px;
+      background-color: #ffffff;
+      margin: 0 10px;
+    }
+  }
+  &__icon {
+    position: relative;
+    display: inline-block;
+
+    img {
+      width: 32px;
+      height: 30px;
+    }
+    &-qty {
+      @include font-size(12px);
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-weight: 600;
+      color: $foreground;
+      width: 20px;
+      text-align: center;
+    }
+  }
+
+}

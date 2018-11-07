@@ -1,0 +1,10 @@
+<div class="cart" (drop)="drop($event);" (dragover)="dragover($event);">
+  <div class="cart__amount">
+    <span class="cart__amount-title d-none d-lg-inline-block">TOTAL AMOUNT:</span>
+    <span class="cart__amount-total">$ {{total}}</span>
+  </div>
+  <div class="cart__icon">
+    <img src="./assets/svg/cart.svg" />
+    <span class="cart__icon-qty">{{qty}}</span>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+home-app {
+  display: block;
+  background: $background;
+  padding: 39px 0;
+
+  .home {
+    &-title {
+      @include font-size(30px);
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      color: $header;
+    }
+
+    &-desc {
+      @include font-size(17px);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      color: $subheader;
+    }
+  }
+}

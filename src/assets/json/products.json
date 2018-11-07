@@ -1,0 +1,40 @@
+{
+  "Products": [
+    {
+      "Name": "Sunflower Melody",
+      "Images": {
+        "Mobile": "./assets/img/flower-1.jpg",
+        "Tablet": "./assets/img/flower-1@2x.jpg",
+        "Desktop": "./assets/img/flower-1@3x.jpg"
+      },
+      "Price": "30.00"
+    },
+    {
+      "Name": "Spring Mix",
+      "Images": {
+        "Mobile": "./assets/img/flower-2.jpg",
+        "Tablet": "./assets/img/flower-2@2x.jpg",
+        "Desktop": "./assets/img/flower-2@3x.jpg"
+      },
+      "Price": "35.00"
+    },
+    {
+      "Name": "Colorful Arrangement",
+      "Images": {
+        "Mobile": "./assets/img/flower-3.jpg",
+        "Tablet": "./assets/img/flower-3@2x.jpg",
+        "Desktop": "./assets/img/flower-3@3x.jpg"
+      },
+      "Price": "40.00"
+    },
+    {
+      "Name": "Tulip Season",
+      "Images": {
+        "Mobile": "./assets/img/flower-4.jpg",
+        "Tablet": "./assets/img/flower-4@2x.jpg",
+        "Desktop": "./assets/img/flower-4@3x.jpg"
+      },
+      "Price": "50.00"
+    }
+  ]
+}

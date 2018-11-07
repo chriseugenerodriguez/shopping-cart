@@ -1,0 +1,29 @@
+footer {
+    background: $foreground;
+    padding: 46px 0 26px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 31px;
+    text-align: center;
+    color: #ffffff;
+
+  .footer {
+    &-title {
+      @include font-size(16px);
+      font-weight: 600;
+      color: $header;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &__list {
+
+      &-item {
+        @include font-size(14px);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+    }
+  }
+}

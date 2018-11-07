@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="home-title">Top Products</div>
+  <div class="home-desc">To add desired products to the cart, simply drag a product image to the cart icon found at the
+    top right of the page.</div>
+
+  <div class="product__items">
+    <div class="row">
+      <module-product-app draggable="true" [name]="i.Name" [image]="i.Images" [price]="i.Price"
+      class="product__items__item col-lg-3 col-md-6 col-sm-12" *ngFor="let i of products"></module-product-app>
+    </div>
+  </div>
+</div>

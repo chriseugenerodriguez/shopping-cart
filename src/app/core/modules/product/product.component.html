@@ -1,0 +1,16 @@
+<div #item (dragstart)="dragstart($event, price, qty);" (dragend)="dragend();">
+  <img class="product__items__item__img-desktop" [src]="image['Desktop']" [alt]="name" />
+  <img class="product__items__item__img-tablet" [src]="image['Tablet']" [alt]="name" />
+  <img class="product__items__item__img-mobile" [src]="image['Mobile']" [alt]="name" />
+  <div class="product__items__item__meta">
+    <div class="product__items__item__meta-title">{{name}}</div>
+    <div class="product__items__item__meta-price">
+      ${{price}}
+    </div>
+    <select class="product__items__item__meta-qty" (change)="onSelect($event.target.value)" [(ngModel)]="selectedQuantity.id">
+      <option *ngFor="let i of quantity" value={{i.id}}>
+        {{i.name}}
+      </option>
+    </select>
+  </div>
+</div>
