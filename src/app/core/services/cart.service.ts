@@ -59,43 +59,6 @@ export class CartService {
     localStorage.set('cart', b);
   }
 
-  public updateCart(item: Item) {
-    const e = this.cartObj.find(r => r.id === item.id);
-    const i = this.cartObj.findIndex(r => r.id === item.id);
-
-    if (e) {
-      this.cartObj[i] = e;
-      localStorage.set('cart', this.cartObj);
-    }
-  }
-
-  public updateQty(item: Item) {
-    const e = this.cartObj.find(r => r.id === item.id);
-    const i = this.cartObj.findIndex(r => r.id === item.id);
-
-    if (e) {
-      e.quantity += 1;
-      this.cartObj[i] = e;
-
-      localStorage.set('cart', this.cartObj);
-    }
-  }
-
-  public getTotalQuantity(): Observable<any> {
-    const a = localStorage.get('cart');
-    const b = localStorage.getItem('cart');
-    let c: Observable<number>;
-    if (b) {
-      a.subscribe(r => {
-        c = r.map(i => i.quantity).reduce((prev, next) => prev + next, 0);
-      });
-    } else {
-      c = null;
-    }
-
-    return c;
-  }
-
   public getTotalAmount(): Observable<number> {
     const a = localStorage.get('cart');
     let b: any;
